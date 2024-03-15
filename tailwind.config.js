@@ -11,6 +11,8 @@ module.exports = {
       white: '#FFF',
       sea_salt: '#FAFAFA',
       anti_flash_white: '#F1F1F1',
+      border_default: '#CFCFCF',
+      error: '#CD2C2C',
     },
   },
   plugins: [],
