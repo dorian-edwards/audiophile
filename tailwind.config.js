@@ -12,6 +12,7 @@ module.exports = {
       sea_salt: '#FAFAFA',
       anti_flash_white: '#F1F1F1',
       border_default: '#CFCFCF',
+      transparent: 'rgba(0,0,0,0)',
       error: '#CD2C2C',
     },
   },
