@@ -14,6 +14,7 @@ module.exports = {
       border_default: '#CFCFCF',
       transparent: 'rgba(0,0,0,0)',
       error: '#CD2C2C',
+      gray: '#B5B5B5',
     },
   },
   plugins: [],
