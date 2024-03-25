@@ -8,6 +8,7 @@ module.exports = {
       atomic_tangerine: '#FBAF85',
       black: '#000',
       night: '#101010',
+      'border-gray': 'rgb(27,27,27)',
       white: '#FFF',
       sea_salt: '#FAFAFA',
       anti_flash_white: '#F1F1F1',
