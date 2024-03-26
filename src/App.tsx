@@ -1,7 +1,7 @@
-import MobileNav from './components/navigation/MobileNav'
+import TabletNav from './components/navigation/TabletNav'
 
 function App() {
-  return <MobileNav />
+  return <TabletNav />
 }
 
 export default App

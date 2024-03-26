@@ -4,7 +4,10 @@ import Logo from '../../icons/Logo'
 
 export default function MobileNav() {
   return (
-    <nav className='h-[9rem] bg-black px-[2.4rem] flex justify-between items-center border-[0.1rem] border-b-border-gray'>
+    <nav
+      id='mobile-nav'
+      className='h-[9rem] bg-black px-[2.4rem] flex justify-between items-center border-[0.1rem] border-b-border-gray'
+    >
       <MenuIcon sx={{ color: '#FFF' }} fontSize='large' />
       <Logo />
       <Cart />
