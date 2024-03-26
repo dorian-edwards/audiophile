@@ -43,8 +43,7 @@ export default function Input() {
           type={`text`}
           value={text}
           onChange={handleChange}
-          style={inputStyling}
-          className={`text-[1.4rem] leading-[1.375] ${
+          className={`block py-[1.8rem] px-[2.4rem] border-[0.1rem] border-border_default rounded-lg w-full text-[1.4rem] leading-[1.375] ${
             error.status
               ? 'outline outline-2 outline-error !border-transparent'
               : ''
@@ -60,12 +59,4 @@ export default function Input() {
       </button>
     </form>
   )
-}
-
-const inputStyling: React.CSSProperties | undefined = {
-  display: 'block',
-  padding: '1.8rem 2.4rem',
-  border: '1px solid #CFCFCF',
-  borderRadius: '8px',
-  width: '100%',
 }

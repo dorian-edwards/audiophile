@@ -3,9 +3,11 @@ import { ReactNode } from 'react'
 export default function Button({
   children,
   variant,
+  sx,
 }: {
   children: ReactNode
   variant: number | string
+  sx?: React.CSSProperties | undefined
 }) {
   return (
     <button
@@ -13,6 +15,7 @@ export default function Button({
         'text-[1.3rem] font-bold py-[1.5rem] px-[3.2rem] uppercase w-full max-w-[60rem] tracking-[1px] ' +
         buttonStyles[variant]
       }
+      style={sx}
     >
       {children}
       {variant === 3 || variant === '3' ? <ChevronRight /> : null}
