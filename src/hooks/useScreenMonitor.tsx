@@ -10,7 +10,6 @@ export default function useScreenMonitor() {
       : DISPLAY_MODE.MOBILE
   )
 
-  // attn: could this be extracted into custom hook?
   useEffect(() => {
     const handleResize = () => {
       setMobile(

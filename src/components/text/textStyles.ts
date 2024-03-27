@@ -46,7 +46,14 @@ const textStyles: TextStyle = {
     fontWeight: 200,
     color: '#D87D4A',
   },
-  sub_title: {
+  link: {
+    fontSize: '1.3rem',
+    lineHeight: '2.5rem',
+    letterSpacing: '0.2rem',
+    fontWeight: 700,
+    color: '#FFF',
+  },
+  'sub-title': {
     fontSize: '1.3rem',
     lineHeight: '2.5rem',
     letterSpacing: '0.1rem',
@@ -57,6 +64,8 @@ const textStyles: TextStyle = {
     fontSize: '1.5rem',
     lineHeight: '2.5rem',
     fontWeight: 400,
+    textTransform: 'none',
+    color: '#fff',
   },
 }
 

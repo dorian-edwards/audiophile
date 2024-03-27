@@ -10,8 +10,8 @@ export default function Text({
 }) {
   let element
   const style: React.CSSProperties | undefined = {
-    ...textStyles[type],
     textTransform: 'uppercase',
+    ...textStyles[type],
   }
 
   switch (type) {
@@ -36,7 +36,17 @@ export default function Text({
     case 'overline':
       element = <p style={style}>{children}</p>
       break
-    case 'sub_title':
+    case 'link':
+      element = (
+        <p
+          style={style}
+          className='hover:!text-caramel transition-colors duration-300'
+        >
+          {children}
+        </p>
+      )
+      break
+    case 'sub-title':
       element = <p style={style}>{children}</p>
       break
     case 'body':
