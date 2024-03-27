@@ -127,7 +127,7 @@ export default textStyles
 // ...
 ```
 
-### Day 1: Form Elements & Theme
+### Day 2: Header and Screen Monitor
 
 #### **Header**
 
