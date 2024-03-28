@@ -1,7 +1,11 @@
-import TabletNav from './components/navigation/TabletNav'
+import Header from './components/header/Header'
 
 function App() {
-  return <TabletNav />
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
 export default App

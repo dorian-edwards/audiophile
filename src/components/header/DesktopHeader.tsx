@@ -8,7 +8,7 @@ import Text from '../text/Text'
 export default function DesktopHeader() {
   return (
     <header id='desktop-header' className='h-[9rem] bg-black px-[2.4rem]'>
-      <div className='content-container h-full w-full max-w-[111rem] mx-auto border-[0.1rem] border-b-border-gray flex items-center justify-between'>
+      <div className='content-container h-full w-full max-w-[111rem] mx-auto border-b-[0.1rem] border-b-border-gray flex items-center justify-between'>
         <Logo />
         <nav>
           <ul className='flex gap-[3.4rem]'>

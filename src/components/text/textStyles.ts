@@ -9,6 +9,12 @@ const textStyles: TextStyle = {
     letterSpacing: '0.2rem',
     fontWeight: 500,
   },
+  h1Mobile: {
+    fontSize: '3.6rem',
+    lineHeight: '4rem',
+    letterSpacing: '0.129rem',
+    fontWeight: 700,
+  },
   h2: {
     fontSize: '4rem',
     lineHeight: '4.4rem',
