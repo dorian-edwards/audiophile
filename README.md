@@ -5,6 +5,7 @@
 - [Day 1: Form Elements and Theme](#day-1-form-elements-and-theme)
 - [Day 2: Header and Screen Monitor](#day-2-header-and-screen-monitor)
 - [Day 3: Home Page Banner](#day-3-home-page-banner)
+- [Day 4: Product Category Card](#day-4-product-category-card)
 
 ### Day 1: Form Elements and Theme
 

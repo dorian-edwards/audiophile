@@ -1,8 +1,8 @@
 import Button from './formElements/Button'
 import Text from './text/Text'
-import Earbuds from './images/shared/mobile/image-category-thumbnail-earphones.png'
-import Speaker from './images/shared/mobile/image-category-thumbnail-speakers.png'
-import Headphones from './images/shared/mobile/image-category-thumbnail-headphones.png'
+import Earbuds from '../images/shared/mobile/image-category-thumbnail-earphones.png'
+import Speaker from '../images/shared/mobile/image-category-thumbnail-speakers.png'
+import Headphones from '../images/shared/mobile/image-category-thumbnail-headphones.png'
 import { CATEGORY } from '../dataTypes'
 
 export default function CategoryCard({ type }: { type: CATEGORY }) {
