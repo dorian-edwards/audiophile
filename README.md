@@ -253,9 +253,9 @@ const HeaderProductStyle: { [key: string]: string } = {
 
 #### **Text Component Refactor**
 
-I keep running into this problem with Frontend Mentor projects where there is some typography that isn't in the design system, not entirely missing, but maybe just a little different. I built my _Text_ component to return the desired typography based on [it's _type_ prop](#text), but like the pseudo class problem I had, these one-off stylings first resulted in less than elegant solutions. So I've decided to overhaul my _Text_ component. (Note the tense has change because I'm currently writing this as I'm building. The previous secions were written after the fact)
+I keep running into this problem with Frontend Mentor projects where there is some typography that isn't in the design system, not entirely missing, but maybe just a little different. I built my _Text_ component to return the desired typography based on [it's _type_ prop](#text), but like the pseudo class problem I had, these one-off stylings resulted in less than elegant solutions. So I've decided to overhaul my _Text_ component. (Note the tense has changed because I'm currently writing this as I'm building. The previous secions were written after the fact)
 
-I've made the _type_ prop optional for completely new styling and added another optional prop called _sx_. This is inline css styling that I'll apply after the type styling so as to override it.
+I've made the _type_ prop optional for completely new custom styling not already predefined and I've added another optional prop called _sx_. This is inline css styling that I'll apply after the type styling to override it.
 
 ```tsx
 export default function Text({
@@ -292,13 +292,13 @@ export default function Text({
 
 #### **Categroy Card Component**
 
-This is the final product
+Here is what it should look like
 
 ![Frontend mentoor Earphones category card component from design system](./images/category-card.png)
 
 <br/>
 
-And here is what I've build so far
+And here is what I've built so far
 
 ![Frontend mentor Earphones category card component that I build](./images/category-card2.png)
 
@@ -333,7 +333,8 @@ And here is the code
 ```
 
 <br/>
-However, since this component appears all over the place I have to tweak it to make it resuable. Each component will need to have a unique id, title, image, and behavior when clicked. The id, title and image I'll store in an object and use an enum type as the object property.
+
+However, since this component appears all over the place I have to tweak it to make it resuable. Each component will need to have a unique id, title, image, alt attribute and behavior when clicked. The id, title, image, and alt attribute I'll store in an object and use an enum type as the object property. I'll figure out the behavior once I start adding functionality to my app.
 
 <br/>
 
