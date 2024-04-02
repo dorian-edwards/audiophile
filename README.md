@@ -247,3 +247,160 @@ const HeaderProductStyle: { [key: string]: string } = {
 ![481px wide audiophile tablet home page product banner with calculated width](./images/home481_calc.png)
 
 > From left to right: max tablet (768), min tablet (481px) before, min tablet (481px) after
+
+### Day 4: Product Category Card
+
+#### **Text Component Refactor**
+
+I keep running into this problem with Frontend Mentor projects where there is some typography that isn't in the design system, not entirely missing, but maybe just a little different. I built my _Text_ component to return the desired typography based on [it's _type_ prop](#text), but like the pseudo class problem I had, these one-off stylings first resulted in less than elegant solutions. So I've decided to overhaul my _Text_ component. (Note the tense has change because I'm currently writing this as I'm building. The previous secions were written after the fact)
+
+I've made the _type_ prop optional for completely new styling and added another optional prop called _sx_. This is inline css styling that I'll apply after the type styling so as to override it.
+
+```tsx
+export default function Text({
+  type,
+  children,
+  className,
+  sx,
+}: {
+  type?: string | undefined
+  children: ReactNode
+  className?: string
+  sx?: React.CSSProperties | undefined
+}) {
+  let element
+  const style: React.CSSProperties | undefined = {
+    textTransform: 'uppercase',
+    ...textStyles[type as string],
+  }
+
+  switch (type) {
+    case 'h1':
+      element = (
+        <h1 className={className} style={{ ...style, ...sx }}>
+          {children}
+        </h1>
+      )
+      break
+    // ...
+  }
+
+  return <>{element}</>
+}
+```
+
+#### **Categroy Card Component**
+
+This is the final product
+
+![Frontend mentoor Earphones category card component from design system](./images/category-card.png)
+
+<br/>
+
+And here is what I've build so far
+
+![Frontend mentor Earphones category card component that I build](./images/category-card2.png)
+
+<br/>
+
+And here is the code
+
+```tsx
+// ...
+<div className='category-card w-full max-w-[35rem] relative'>
+  <img src={Earbud} alt='' className='w-[60%] mx-auto relative z-10' />
+  <div className='category-card-text bg-anti-flash-white pt-[8.8rem] pb-[2.2rem] absolute w-full mx-auto bottom-[-64px] z-0'>
+    <Text
+      type='body'
+      sx={{
+        color: '#000',
+        textTransform: 'uppercase',
+        fontSize: '1.5rem',
+        fontWeight: '700',
+        letterSpacing: '0.107rem',
+        textAlign: 'center',
+      }}
+    >
+      Earphones
+    </Text>
+    <Button variant={3} svgSx={{ stroke: '#D87D4A' }}>
+      Shop
+    </Button>
+  </div>
+</div>
+// ...
+```
+
+<br/>
+However, since this component appears all over the place I have to tweak it to make it resuable. Each component will need to have a unique id, title, image, and behavior when clicked. The id, title and image I'll store in an object and use an enum type as the object property.
+
+<br/>
+
+```tsx
+// dataTypes.tsx
+
+export enum CATEGORY {
+  HEADPHONES = 'headphones',
+  SPEAKERS = 'speakers',
+  EARBUDS = 'earbuds',
+}
+
+export const categoryData: {
+  [key in CATEGORY]: { title: string; img: string; imgAlt: string }
+} = {
+  [CATEGORY.HEADPHONES]: {
+    title: 'headphones',
+    img: Headphones,
+    imgAlt: 'Audiophile headphones',
+  },
+  [CATEGORY.SPEAKERS]: {
+    title: 'speakers',
+    img: Speaker,
+    imgAlt: 'Audiophile speaker',
+  },
+  [CATEGORY.EARBUDS]: {
+    title: 'earbuds',
+    img: Earbuds,
+    imgAlt: 'Audiophile earbbuds',
+  },
+}
+```
+
+<br/>
+
+```tsx
+// CategoryCard.tsx
+
+export function CategoryCard({ type }: { type: CATEGORY }) {
+  const { title, img, imgAlt } = categoryData[type]
+  return (
+    <div
+      id={`category-card-${title}`}
+      className='category-card w-full max-w-[35rem] relative'
+    >
+      <img src={img} alt={imgAlt} className='w-[60%] mx-auto relative z-10' />
+      <div
+        className='category-card-text bg-anti-flash-white pt-[8.8rem]
+        pb-[2.2rem] absolute w-full mx-auto bottom-[-64px] z-0'
+      >
+        <Text
+          type='body'
+          sx={{
+            color: '#000',
+            textTransform: 'uppercase',
+            fontSize: '1.5rem',
+            fontWeight: '700',
+            letterSpacing: '0.107rem',
+            textAlign: 'center',
+          }}
+        >
+          {title}
+        </Text>
+        <Button variant={3} svgSx={{ stroke: '#D87D4A' }}>
+          Shop
+        </Button>
+      </div>
+    </div>
+  )
+}
+```

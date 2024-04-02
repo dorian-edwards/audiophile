@@ -1,4 +1,8 @@
-export default function PatternCircles() {
+export default function PatternCircles({
+  sx,
+}: {
+  sx: React.SVGAttributes<SVGGElement>
+}) {
   return (
     <svg width='944' height='944' xmlns='http://www.w3.org/2000/svg'>
       <g stroke='#FFF' fill='none' fillRule='evenodd' opacity='.202'>
@@ -8,4 +12,9 @@ export default function PatternCircles() {
       </g>
     </svg>
   )
+}
+
+const test: React.SVGAttributes<SVGGElement> = {
+  stroke: '',
+  fillRule: 'evenodd',
 }

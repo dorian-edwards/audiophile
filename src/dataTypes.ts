@@ -3,3 +3,9 @@ export enum DISPLAY_MODE {
   TABLET,
   DESKTOP,
 }
+
+export enum CATEGORY {
+  HEADPHONES = 'headphones',
+  SPEAKERS = 'speakers',
+  EARBUDS = 'earbuds',
+}
