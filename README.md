@@ -52,7 +52,7 @@ The input element was a little more intensive as I wanted to build my own client
 
 #### **Text**
 
-I also took a similar approach to typography by building a `Text` component that wraps text and renders the text in an element with a specified tag and styling. This too was based on the varied texts-sizes, line-heights, and character spacings laid out in the design system.
+I also took a similar approach to typography by building a `Text` component that wraps text and renders the text in an element with a specified tag and styling. Using the typography in the design system I built an object that has a key type (string) and a CSS property object as the value. I then use this object to plug in styles based on the type prop.
 
 ```tsx
 // Text.tsx
