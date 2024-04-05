@@ -26,11 +26,11 @@ export default function Text({
         </h1>
       )
       break
-    case 'h1Mobile':
+    case 'h2Mobile':
       element = (
-        <h1 className={className} style={{ ...style, ...sx }}>
+        <h2 className={className} style={{ ...style, ...sx }}>
           {children}
-        </h1>
+        </h2>
       )
       break
     case 'h2':
