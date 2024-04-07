@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { DISPLAY_MODE } from '../dataTypes'
 
 export default function useScreenMonitor() {
-  const [mobile, setMobile] = useState<DISPLAY_MODE>(
+  const [display, setDisplay] = useState<DISPLAY_MODE>(
     window.innerWidth > 768
       ? DISPLAY_MODE.DESKTOP
       : window.innerWidth > 480
@@ -12,7 +12,7 @@ export default function useScreenMonitor() {
 
   useEffect(() => {
     const handleResize = () => {
-      setMobile(
+      setDisplay(
         window.innerWidth > 768
           ? DISPLAY_MODE.DESKTOP
           : window.innerWidth > 480
@@ -24,5 +24,5 @@ export default function useScreenMonitor() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  return mobile
+  return display
 }
