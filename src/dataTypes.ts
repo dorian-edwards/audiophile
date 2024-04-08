@@ -9,3 +9,13 @@ export enum CATEGORY {
   SPEAKERS = 'speakers',
   EARBUDS = 'earbuds',
 }
+
+export type PagePreviewProps = {
+  [key in DISPLAY_MODE]: {
+    className: string
+    contentWrapperStyling: string
+    titleTextType: string
+    titleTextStyle: React.CSSProperties | undefined
+    bodyTextStyle: React.CSSProperties | undefined
+  }
+}
