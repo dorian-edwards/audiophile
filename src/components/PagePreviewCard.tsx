@@ -47,7 +47,7 @@ export default function PagePreview() {
 const pagePreviewProps: PagePreviewProps = {
   [DISPLAY_MODE.DESKTOP]: {
     className:
-      'category-page-preview-card w-[90%] mx-auto bg-caramel px-[2.4rem] pt-[13.3rem] pb-[12.4rem] bg-no-repeat bg-[url(./images/home/desktop/image-speaker-zx9.png),_url(./images/home/desktop/pattern-circles.svg)] bg-[size:32.7%,_900px] bg-[position:left_90px_bottom_-10px,_left_-174px_bottom_-302px]',
+      'category-page-preview-card w-[90%] mx-auto bg-caramel px-[2.4rem] pt-[13.3rem] pb-[12.4rem] bg-no-repeat bg-[url(./images/home/desktop/image-speaker-zx9.png),_url(./images/home/desktop/pattern-circles.svg)] bg-[size:32.7%,_900px] bg-[position:left_90px_bottom_-10px,_left_-200px_bottom_-302px]',
     contentWrapperStyling:
       'category-page-preview-card_text w-full max-w-[35rem] ml-auto',
     titleTextType: 'h1',
