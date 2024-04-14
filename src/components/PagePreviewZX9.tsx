@@ -1,9 +1,9 @@
-import { DISPLAY_MODE, PagePreviewProps } from '../dataTypes'
+import { DISPLAY_MODE, PagePreviewStyles } from '../dataTypes'
 import useScreenMonitor from '../hooks/useScreenMonitor'
 import Button from './formElements/Button'
 import Text from './text/Text'
 
-export default function PagePreview() {
+export default function PagePreviewZX9() {
   const display = useScreenMonitor()
   const {
     className,
@@ -11,7 +11,7 @@ export default function PagePreview() {
     titleTextType,
     titleTextStyle,
     bodyTextStyle,
-  } = pagePreviewProps[display]
+  } = pagePreviewZX9Props[display]
 
   return (
     <div className={className}>
@@ -44,7 +44,7 @@ export default function PagePreview() {
   )
 }
 
-const pagePreviewProps: PagePreviewProps = {
+const pagePreviewZX9Props: PagePreviewStyles = {
   [DISPLAY_MODE.DESKTOP]: {
     className:
       'category-page-preview-card w-[90%] mx-auto bg-caramel px-[2.4rem] pt-[13.3rem] pb-[12.4rem] bg-no-repeat bg-[url(./images/home/desktop/image-speaker-zx9.png),_url(./images/home/desktop/pattern-circles.svg)] bg-[size:32.7%,_900px] bg-[position:left_90px_bottom_-10px,_left_-200px_bottom_-302px]',

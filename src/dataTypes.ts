@@ -10,7 +10,7 @@ export enum CATEGORY {
   EARBUDS = 'earbuds',
 }
 
-export type PagePreviewProps = {
+export type PagePreviewStyles = {
   [key in DISPLAY_MODE]: {
     className: string
     contentWrapperStyling: string
