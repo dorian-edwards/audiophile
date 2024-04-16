@@ -3,7 +3,10 @@ import Button from '../formElements/Button'
 
 export default function Product({ variant }: { variant: string }) {
   return (
-    <section id='header-product' className={HeaderProductStyle[variant]}>
+    <section
+      id='header-product'
+      className={HeaderProductStyle[variant] + ' mb-[5rem] tablet:mb-[10rem]'}
+    >
       <div
         className={`content-container max-w-[111rem] mx-auto ${
           variant === 'desktop'

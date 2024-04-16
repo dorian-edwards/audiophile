@@ -19,6 +19,10 @@ module.exports = {
       'light-gray': '#B5B5B5',
       silver: '#C6C6C6',
     },
+    screens: {
+      tablet: '481px',
+      desktop: '769px',
+    },
   },
   plugins: [],
 }

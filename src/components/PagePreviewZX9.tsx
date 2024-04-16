@@ -14,7 +14,7 @@ export default function PagePreviewZX9() {
   } = pagePreviewZX9Props[display]
 
   return (
-    <div className={className}>
+    <div className={className + ' rounded-[0.8rem]'}>
       <div className={contentWrapperStyling}>
         <div className='category-page-preview-card-title-wrapper mb-[2.4rem]'>
           <Text type={titleTextType} sx={titleTextStyle}>
