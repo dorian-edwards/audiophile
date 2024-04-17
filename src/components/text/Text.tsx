@@ -98,6 +98,13 @@ export default function Text({
           {children}
         </p>
       )
+      break
+    default:
+      element = (
+        <p className={className} style={{ ...style, ...sx }}>
+          {children}
+        </p>
+      )
   }
 
   return <>{element}</>
