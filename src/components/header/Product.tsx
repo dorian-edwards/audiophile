@@ -1,23 +1,30 @@
 import Text from '../text/Text'
 import Button from '../formElements/Button'
+import { DISPLAY_MODE } from '../../dataTypes'
 
-export default function Product({ variant }: { variant: string }) {
+export default function Product({
+  displayMode,
+}: {
+  displayMode: DISPLAY_MODE
+}) {
   return (
     <section
       id='header-product'
-      className={HeaderProductStyle[variant] + ' mb-[5rem] tablet:mb-[10rem]'}
+      className={
+        HeaderProductStyle[displayMode] + ' mb-[5rem] tablet:mb-[10rem]'
+      }
     >
       <div
         className={`content-container max-w-[111rem] mx-auto ${
-          variant === 'desktop'
+          displayMode === DISPLAY_MODE.DESKTOP
             ? 'bg-[url(./images/home/desktop/image-header.jpg)] bg-cover bg-bottom bg-no-repeat pt-[12.8rem] pb-[15.8rem]'
             : ''
         }`}
       >
         <div
           id='header-info'
-          className={`${HeaderInfoStyle[variant]} + ${
-            variant === 'desktop' ? 'pr-[1.065rem]' : ''
+          className={`${HeaderInfoStyle[displayMode]} + ${
+            displayMode === DISPLAY_MODE.DESKTOP ? 'pr-[1.065rem]' : ''
           }`}
         >
           <Text type='overline' className='!text-gray mb-[1.6rem]'>
@@ -46,16 +53,16 @@ export default function Product({ variant }: { variant: string }) {
   )
 }
 
-const HeaderProductStyle: { [key: string]: string } = {
-  mobile:
+const HeaderProductStyle: { [key in DISPLAY_MODE]: string } = {
+  [DISPLAY_MODE.MOBILE]:
     'text-center pt-[10.8rem] pb-[11.2rem] px-[2.4rem] bg-black bg-[url(./images/home/mobile/image-header.jpg)] bg-cover bg-no-repeat bg-bottom',
-  tablet:
+  [DISPLAY_MODE.TABLET]:
     'text-center pt-[12.6rem] pb-[16.7rem] px-[2.4rem] bg-black bg-[url(./images/home/tablet/image-header.jpg)] bg-[length:calc(100vw*0.063_+_643px)] bg-no-repeat bg-bottom',
-  desktop: 'px-[2.4rem] bg-black mx-auto',
+  [DISPLAY_MODE.DESKTOP]: 'px-[2.4rem] bg-black mx-auto',
 }
 
-const HeaderInfoStyle: { [key: string]: string } = {
-  mobile: '',
-  tablet: 'max-w-[38rem] mx-auto',
-  desktop: 'max-w-[38rem]',
+const HeaderInfoStyle: { [key in DISPLAY_MODE]: string } = {
+  [DISPLAY_MODE.MOBILE]: '',
+  [DISPLAY_MODE.TABLET]: 'max-w-[38rem] mx-auto',
+  [DISPLAY_MODE.DESKTOP]: 'max-w-[38rem]',
 }
