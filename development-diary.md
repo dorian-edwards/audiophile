@@ -6,6 +6,7 @@
 - [Day 2: Header and Screen Monitor](#day-2-header-and-screen-monitor)
 - [Day 3: Home Page Banner](#day-3-home-page-banner)
 - [Day 4: Product Category Card](#day-4-product-category-card)
+- [Day 5: Page Previews](#day-5-page-previews)
 
 ### Day 1: Form Elements and Theme
 
@@ -300,7 +301,7 @@ Here is what it should look like
 
 And here is what I've built so far
 
-![Frontend mentor Earphones category card component that I build](./images/category-card2.png)
+![Frontend mentor Earphones category card component that I built](./images/category-card2.png)
 
 <br/>
 
@@ -406,3 +407,151 @@ export function CategoryCard({ type }: { type: CATEGORY }) {
   )
 }
 ```
+
+### Day 5: Page Previews
+
+#### **PagePreview Components**
+
+The original idea was to create a component that, with a prop, could render a page preview component for the three product links. However, after seeing how much customization for each one I decided that they were different enough to warrant different components.
+
+![Page Preview cards for speakers and earbuds](/images/page-preview.png)
+
+The next bone-headed idea (which I actually executed) was place all of my stylings, props, and element attributes in an object with a custom enum type as the key. It worked, but once I was done I didn't think it was as elegant as I expected it to be. [The entirety of this brilliant idea can be seen here](https://github.com/dorian-edwards/audiophile/blob/270b48623bb364c0943f5a3b003c3048fb49cbab/src/components/PagePreviewCard.tsx).
+
+```tsx
+// PagePreview.tsx
+
+export default function PagePreview() {
+  const display = useScreenMonitor()
+  const {
+    className,
+    contentWrapperStyling,
+    titleTextType,
+    titleTextStyle,
+    bodyTextStyle,
+  } = pagePreviewProps[display]
+
+  return (
+    <div className={className}>
+      <div className={contentWrapperStyling}>
+        <div className='category-page-preview-card-title-wrapper mb-[2.4rem]'>
+          <Text type={titleTextType} sx={titleTextStyle}>
+            ZX9
+          </Text>
+          <Text type={titleTextType} sx={titleTextStyle}>
+            speaker
+          </Text>
+        </div>
+        <!-- ... -->
+      </div>
+    </div>
+  )
+}
+
+const pagePreviewProps: PagePreviewProps = {
+  [DISPLAY_MODE.DESKTOP]: {
+    className:
+      'category-page-preview-card w-[90%] mx-auto bg-caramel px-[2.4rem] pt-[13.3rem] pb-[12.4rem] bg-no-repeat bg-[url(./images/home/desktop/image-speaker-zx9.png),_url(./images/home/desktop/pattern-circles.svg)] bg-[size:32.7%,_900px] bg-[position:left_90px_bottom_-10px,_left_-200px_bottom_-302px]',
+    contentWrapperStyling:
+      'category-page-preview-card_text w-full max-w-[35rem] ml-auto',
+    titleTextType: 'h1',
+    titleTextStyle: { color: 'white', marginBottom: '2.4rem' },
+    bodyTextStyle: undefined,
+  },
+  // ...
+}
+```
+
+I built at least two PagePreivew components before I realized it was just be better to go the className route. TailwindCSS classes can get a little gnarly but since somethings needed a little customization it helped. For instance my major breakpoints were 480 and 768, for tablet and desktop respectively, however, at the very low end of these viewport widths, things looked a little funky. Here I could use tailwind arbitrary values
+
+```tsx
+<div class="min-[320px]:text-center max-[600px]:bg-sky-300">
+  <!-- ... -->
+</div>
+
+```
+
+This allowed me to make slight adjustments outside of the major breakpoints.
+
+#### **Working with background images**
+
+The trickiest part of this entire endeavor was simply trying to get the background image positioning right on all viewport sizes, especially with the ZX9 background since it's comprised of an image and an svg pattern. It took a while tinkering in the developer tools to finally come up with this gnarly line of code. Oh and that was after figuring out how to style multiple background images with tailwind 🥴.
+
+```
+  'bg-[url(./images/home/desktop/image-speaker-zx9.png),_url(./images/home/desktop/pattern-circles.svg)] bg-[size:32.7%,_900px] bg-[position:left_90px_bottom_-10px,_left_-200px_bottom_-302px]'
+```
+
+#### **Bringing it together**
+
+After completing that I'd finished the largest, and most complex pieces of the home page so I decided to piece things together. When I went to make my first Page component, the homepage I realized I made a booboo with the header. I tied the navigation to the product banner which only appears on the home screen
+
+```tsx
+// Header.tsx
+
+export default function Header() {
+  let mode = useScreenMonitor()
+  let element
+  switch (mode) {
+    case DISPLAY_MODE.DESKTOP:
+      element = (
+        <>
+          <DesktopHeader />
+          <Product variant='desktop' />
+        </>
+      )
+      break
+    // ...
+  }
+  return element
+}
+```
+
+So I moved the Product component to the Homepage right below the Header which now only rendered the appropriate navbar.
+
+```tsx
+// Header.tsx
+export default function Header() {
+  let mode = useScreenMonitor()
+  let element
+  switch (mode) {
+    case DISPLAY_MODE.DESKTOP:
+      element = <DesktopHeader />
+
+      break
+    case DISPLAY_MODE.TABLET:
+      element = <TabletHeader />
+
+      break
+    case DISPLAY_MODE.MOBILE:
+      element = <MobileHeader />
+  }
+  return element
+}
+```
+
+```tsx
+// Homepage.tsx
+
+export default function HomePage() {
+  let mode = useScreenMonitor()
+  return (
+    <>
+      <Product displayMode={mode} />
+      <div className='container w-[87.2%] tablet:w-[89.7%] desktop:w-[77.1%] max-w-[111rem] mx-auto flex flex-col gap-y-[2.4rem]'>
+        <div className='w-full flex flex-col justify-center items-center desktop:items-baseline desktop:flex-row  gap-y-[10rem] gap-x-[1rem] mb-[10rem] tablet:mb-[16.8rem]'>
+          <CategoryCard type={CATEGORY.HEADPHONES} />
+          <CategoryCard type={CATEGORY.SPEAKERS} />
+          <CategoryCard type={CATEGORY.EARBUDS} />
+        </div>
+        <PagePreviewZX9 />
+        <PagePreviewZX7 />
+        <PagePreviewYX1 />
+      </div>
+    </>
+  )
+}
+```
+
+And here's how it turned out.
+
+![Partial homepage of Frontend Mentor audiophile project](./images/homepage-incomplete.png)
