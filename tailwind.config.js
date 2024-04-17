@@ -6,7 +6,7 @@ module.exports = {
     colors: {
       caramel: '#D87D4A',
       'atomic-tangerine': '#FBAF85',
-      black: '#1A1A1A',
+      black: '#191919',
       night: '#101010',
       'border-gray': 'rgb(40,40,40)',
       white: '#FFF',

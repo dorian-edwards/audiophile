@@ -10,7 +10,7 @@ export default function CategoryCard({ type }: { type: CATEGORY }) {
   return (
     <div
       id={`category-card-${title}`}
-      className='category-card w-full max-w-[35rem] relative'
+      className='category-card w-full desktop:max-w-none max-w-[35rem] relative'
     >
       <img src={img} alt={imgAlt} className='w-[60%] mx-auto relative z-10' />
       <div className='category-card-text bg-anti-flash-white pt-[8.8rem] pb-[2.2rem] absolute w-full mx-auto bottom-[-64px] z-0'>
