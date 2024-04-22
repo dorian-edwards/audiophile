@@ -9,7 +9,7 @@ export default function Text({
 }: {
   type?: string | undefined
   children: ReactNode
-  className?: string
+  className?: string | undefined
   sx?: React.CSSProperties | undefined
 }) {
   let element

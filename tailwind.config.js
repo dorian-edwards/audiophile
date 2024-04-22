@@ -10,7 +10,7 @@ module.exports = {
       night: '#101010',
       'border-gray': 'rgb(40,40,40)',
       white: '#FFF',
-      ' sea-salt': '#FAFAFA',
+      'sea-salt': '#FAFAFA',
       'anti-flash-white': '#F1F1F1',
       'border-default': '#CFCFCF',
       transparent: 'rgba(0,0,0,0)',
@@ -18,6 +18,7 @@ module.exports = {
       gray: '#8C8C8C',
       'light-gray': '#B5B5B5',
       silver: '#C6C6C6',
+      'med-gray': '#7D7D7D',
     },
     screens: {
       tablet: '481px',

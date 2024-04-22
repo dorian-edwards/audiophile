@@ -69,7 +69,7 @@ const textStyles: TextStyle = {
   body: {
     fontSize: '1.5rem',
     lineHeight: '2.5rem',
-    fontWeight: 400,
+    fontWeight: 500,
     textTransform: 'none',
     color: '#fff',
   },
