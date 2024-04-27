@@ -2,7 +2,7 @@ import Text from './text/Text'
 
 export default function About() {
   return (
-    <div className='about flex flex-col desktop:flex-row desktop:justify-between gap-x-[5rem]'>
+    <div className='about flex flex-col desktop:flex-row desktop:justify-between gap-x-[5rem] mb-[12rem] tablet:mb-[9.6rem] desktop:mb-[20rem]'>
       <div className='img w-full h-[30rem] desktop:h-[58.8rem] desktop:max-w-[54rem] rounded-[0.8rem] mb-[4rem] bg-no-repeat bg-cover bg-center bg-[url(./images/shared/mobile/image-best-gear.jpg)] tablet:bg-[url(./images/shared/tablet/image-best-gear.jpg)] desktop:bg-[url(./images/shared/desktop/image-best-gear.jpg)] desktop:order-last' />
       <div className='abiout__content w-full desktop:max-w-[44.5rem] desktop:!text-left flex items-center'>
         <div className='text-wrapper'>

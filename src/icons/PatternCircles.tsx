@@ -13,8 +13,3 @@ export default function PatternCircles({
     </svg>
   )
 }
-
-const test: React.SVGAttributes<SVGGElement> = {
-  stroke: '',
-  fillRule: 'evenodd',
-}

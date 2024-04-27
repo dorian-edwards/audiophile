@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Header from './components/header/Header'
 import HomePage from './components/pages/Homepage'
 
@@ -6,7 +7,10 @@ function App() {
     // <Canvas lightMode={true}>
     <>
       <Header />
-      <HomePage />
+      <main>
+        <HomePage />
+      </main>
+      <Footer />
     </>
     // </Canvas>
   )

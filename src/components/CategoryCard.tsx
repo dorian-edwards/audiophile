@@ -27,9 +27,7 @@ export default function CategoryCard({ type }: { type: CATEGORY }) {
         >
           {title}
         </Text>
-        <Button variant={3} svgSx={{ stroke: '#D87D4A' }}>
-          Shop
-        </Button>
+        <Button variant={3}>Shop</Button>
       </div>
     </div>
   )

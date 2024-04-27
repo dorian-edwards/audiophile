@@ -4,19 +4,13 @@ export default function ChevronRight({
   svgSx?: React.SVGAttributes<SVGSVGElement>
 }) {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
-      viewBox='0 0 24 24'
-      strokeWidth={4}
-      stroke='currentColor'
-      className='w-6 h-6'
-      {...svgSx}
-    >
+    <svg width='8' height='12' xmlns='http://www.w3.org/2000/svg'>
       <path
-        strokeLinecap='round'
-        strokeLinejoin='round'
-        d='m8.25 4.5 7.5 7.5-7.5 7.5'
+        d='M1.322 1l5 5-5 5'
+        stroke='#D87D4A'
+        stroke-width='2'
+        fill='none'
+        fill-rule='evenodd'
       />
     </svg>
   )

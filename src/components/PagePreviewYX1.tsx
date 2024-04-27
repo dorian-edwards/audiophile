@@ -19,7 +19,11 @@ export function PagePreviewYX1() {
           </Text>
           <Button
             variant={2}
-            sx={{ maxWidth: '16.5rem', backgroundColor: 'transparent' }}
+            sx={{
+              maxWidth: '16.5rem',
+              backgroundColor: 'transparent',
+              fontSize: '1.2rem',
+            }}
           >
             see product
           </Button>

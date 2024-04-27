@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <Product displayMode={mode} />
-      <div className='container w-[87.2%] tablet:w-[89.7%] desktop:w-[77.1%] max-w-[111rem] mx-auto flex flex-col gap-y-[2.4rem]'>
+      <div className='container flex flex-col gap-y-[2.4rem]'>
         <div className='w-full flex flex-col justify-center items-center desktop:items-baseline desktop:flex-row  gap-y-[10rem] gap-x-[1rem] mb-[10rem] tablet:mb-[16.8rem]'>
           <CategoryCard type={CATEGORY.HEADPHONES} />
           <CategoryCard type={CATEGORY.SPEAKERS} />
