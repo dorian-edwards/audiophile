@@ -1,17 +1,12 @@
-import Footer from './components/Footer'
-import Header from './components/header/Header'
+import BaseLayout from './components/layouts/BaseLayout'
 import HomePage from './components/pages/Homepage'
 
 function App() {
   return (
     // <Canvas lightMode={true}>
-    <>
-      <Header />
-      <main>
-        <HomePage />
-      </main>
-      <Footer />
-    </>
+    <BaseLayout>
+      <HomePage />
+    </BaseLayout>
     // </Canvas>
   )
 }

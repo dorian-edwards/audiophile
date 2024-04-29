@@ -1,7 +1,7 @@
 import Button from './formElements/Button'
 import Text from './text/Text'
 
-export function PagePreviewYX1() {
+export default function PagePreviewYX1() {
   return (
     <div className='yx1-card w-full flex flex-col gap-y-[2.4rem] gap-x-[1rem] tablet:flex-row'>
       <div className='yx1-card__img h-[20rem] tablet:h-[32rem] bg-[url(./images/home/mobile/image-earphones-yx1.jpg)] bg-cover bg-center tablet:bg-[url(./images/home/tablet/image-earphones-yx1.jpg)] desktop:bg-[url(./images/home/desktop/image-earphones-yx1.jpg)] w-full rounded-[0.8rem]' />
