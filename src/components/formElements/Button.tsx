@@ -16,7 +16,7 @@ export default function Button({
 }) {
   return (
     <button
-      className={`text-[1.3rem] font-bold py-[1.5rem] px-[3.2rem] uppercase w-full max-w-[60rem] tracking-[1px] ${buttonStyles[variant]}  ${className}`}
+      className={`text-[1.3rem] font-bold py-[1.5rem] px-[3.2rem] uppercase w-full max-w-[60rem] tracking-[1px] block ${buttonStyles[variant]}  ${className}`}
       style={sx}
     >
       {children}

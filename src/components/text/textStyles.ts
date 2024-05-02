@@ -31,7 +31,7 @@ const textStyles: TextStyle = {
     fontSize: '2.8rem',
     lineHeight: '3.8rem',
     letterSpacing: '0.2rem',
-    fontWeight: 500,
+    fontWeight: 700,
   },
   h5: {
     fontSize: '2.4rem',
