@@ -19,3 +19,31 @@ export type PagePreviewStyles = {
     bodyTextStyle: React.CSSProperties | undefined
   }
 }
+
+export interface ProductLinkProps {
+  productDetails: {
+    model: string
+    category: string
+    img: string
+    description: string
+  }
+  index: number
+}
+
+export interface ProductDetails {
+  model: string
+  category: string
+  img: string
+  description: string
+}
+
+export interface ProductsProps {
+  products: ProductDetails[]
+}
+
+export interface CategoryPageProps {
+  [key: string]: {
+    title: string
+    products: ProductDetails[]
+  }
+}
