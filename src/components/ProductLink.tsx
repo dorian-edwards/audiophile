@@ -5,6 +5,8 @@ export default function ProductLink({
   productDetails: { model, category, img, description },
   index,
 }: ProductLinkProps) {
+  console.log(img)
+
   return (
     <div className='product-link mb-[12rem] min-[1100px]:flex min-[1100px]:mb-[16rem]'>
       <div
