@@ -1,20 +1,15 @@
-import About from '../About'
-import Categories from '../Categories'
 import CategoryHeader from '../CategoryHeader'
 import Products from '../Products'
 import { CategoryPageProps } from '../../dataTypes'
+import ProductLayout from '../layouts/ProductLayout'
 
 export default function CategoryPage({
   productCategory: { title, products },
 }: CategoryPageProps) {
   return (
-    <>
+    <ProductLayout>
       <CategoryHeader title={title} />
-      <div className='container'>
-        <Products products={products} />
-        <Categories />
-        <About />
-      </div>
-    </>
+      <Products products={products} />
+    </ProductLayout>
   )
 }
