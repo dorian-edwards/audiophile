@@ -1,12 +1,13 @@
 import BaseLayout from './components/layouts/BaseLayout'
 import CategoryPage from './components/pages/CategoryPage'
+import ProductPage from './components/pages/ProductPage'
 // import HomePage from './components/pages/Homepage'
 
 function App() {
   return (
     // <Canvas lightMode={true}>
     <BaseLayout>
-      <CategoryPage productCategory={appData.earbuds} />
+      <ProductPage />
     </BaseLayout>
     // </Canvas>
   )

@@ -13,7 +13,7 @@ export default function Counter() {
   }
 
   return (
-    <div className='flex px-[2rem] justify-between items-center w-[12rem] h-[4.8rem] bg-anti_flash_white'>
+    <div className='flex px-[2rem] justify-between items-center w-[12rem] h-[4.8rem] bg-anti-flash-white shrink-0'>
       <button
         className=' text-[1.3rem] text-gray hover:text-caramel'
         onClick={handleDecrease}

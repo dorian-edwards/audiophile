@@ -27,7 +27,7 @@ export default function ProductLink({
               new product
             </p>
           ) : null}
-          <h2 className='text-product-link tablet:text-xl text-center min-[1100px]:text-left  uppercase mb-[2.4rem] tablet:mb-[3.2rem]'>
+          <h2 className='text-product-title tablet:text-xl text-center min-[1100px]:text-left  uppercase mb-[2.4rem] tablet:mb-[3.2rem]'>
             {model}
             <br />
             {category}

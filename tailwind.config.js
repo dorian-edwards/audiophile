@@ -74,10 +74,25 @@ module.exports = {
           fontWeight: '500',
         },
       ],
-      'product-link': [
+      'product-title': [
         '2.8rem',
         {
           letterSpacing: '0.1rem',
+          fontWeight: '700',
+        },
+      ],
+      'product-price': [
+        '1.8rem',
+        {
+          letterSpacing: '0.129rem',
+          fontWeight: '700',
+        },
+      ],
+      'section-heading': [
+        '2.4rem',
+        {
+          letterSpacing: '0.086rem',
+          lineHeight: '3.6rem',
           fontWeight: '700',
         },
       ],
