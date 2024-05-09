@@ -2,13 +2,13 @@ import Text from './text/Text'
 
 export default function About() {
   return (
-    <div className='about container flex flex-col min-[1100px]:flex-row min-[1100px]:justify-between gap-x-[5rem] mb-[12rem] tablet:mb-[9.6rem] min-[1100px]:mb-[20rem]'>
-      <div className='img w-full h-[30rem] min-[1100px]:h-[58.8rem] min-[1100px]:max-w-[54rem] rounded-[0.8rem] mb-[4rem] bg-no-repeat bg-cover bg-center bg-[url(./images/shared/mobile/image-best-gear.jpg)] tablet:bg-[url(./images/shared/tablet/image-best-gear.jpg)] min-[1100px]:bg-[url(./images/shared/desktop/image-best-gear.jpg)] min-[1100px]:order-last' />
-      <div className='abiout__content w-full min-[1100px]:max-w-[44.5rem] min-[1100px]:!text-left flex items-center'>
+    <div className='about container flex flex-col min-[1110px]:flex-row min-[1110px]:justify-between gap-x-[5rem] mb-[12rem] tablet:mb-[9.6rem] min-[1110px]:mb-[20rem]'>
+      <div className='img w-full h-[30rem] min-[1110px]:h-[58.8rem] min-[1110px]:max-w-[54rem] rounded-[0.8rem] mb-[4rem] bg-no-repeat bg-cover bg-center bg-[url(./images/shared/mobile/image-best-gear.jpg)] tablet:bg-[url(./images/shared/tablet/image-best-gear.jpg)] min-[1110px]:bg-[url(./images/shared/desktop/image-best-gear.jpg)] min-[1110px]:order-last' />
+      <div className='abiout__content w-full min-[1110px]:max-w-[44.5rem] min-[1110px]:!text-left flex items-center'>
         <div className='text-wrapper'>
           <Text
             type='h4'
-            className='text-center mb-[3.2rem] min-[1100px]:text-left'
+            className='text-center mb-[3.2rem] min-[1110px]:text-left'
           >
             Bringing you the <span className='text-caramel'>best</span> audio
             gear

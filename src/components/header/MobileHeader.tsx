@@ -6,11 +6,13 @@ export default function MobileHeader() {
   return (
     <header
       id='mobile-header'
-      className='h-[9rem] bg-black px-[2.4rem] flex justify-between items-center border-b-[0.1rem] border-b-border-gray'
+      className='h-[9rem] bg-black border-b-[0.1rem] border-b-border-gray'
     >
-      <Hamburger />
-      <Logo />
-      <Cart />
+      <div className='container h-full flex justify-between items-center'>
+        <Hamburger />
+        <Logo />
+        <Cart />
+      </div>
     </header>
   )
 }
