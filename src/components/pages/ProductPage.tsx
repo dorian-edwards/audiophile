@@ -1,19 +1,23 @@
 import Button from '../formElements/Button'
 import Counter from '../formElements/Counter'
+import ProductLayout from '../layouts/ProductLayout'
 
 export default function ProductPage() {
   return (
-    <div className='container pt-[10rem]'>
-      <div className='tablet2:flex gap-x-[7rem] tablet2:mb-[12rem] tablet2:h-[48rem] desktop2:h-[56rem] desktop2:mb-[16rem]'>
-        <ProductImage />
-        <ProductDetails />
+    <ProductLayout>
+      <div className='container pt-[10rem]'>
+        <div className='tablet2:flex gap-x-[7rem] tablet2:mb-[12rem] tablet2:h-[48rem] desktop2:h-[56rem] desktop2:mb-[16rem]'>
+          <ProductImage />
+          <ProductDetails />
+        </div>
+        <div className='desktop2:flex gap-x-[12.5rem] desktop2:mb-[7.2rem]'>
+          <ProductFeatures />
+          <Inventory />
+        </div>
+        <Images />
+        <SimilarItems />
       </div>
-      <div className='desktop2:flex gap-x-[12.5rem] desktop2:mb-[7.2rem]'>
-        <ProductFeatures />
-        <Inventory />
-      </div>
-      <Images />
-    </div>
+    </ProductLayout>
   )
 }
 
@@ -123,5 +127,38 @@ export function Images() {
       </div>
       <div className='img-3 rounded-[0.8rem] aspect-[327/368] bg-no-repeat bg-center bg-cover bg-[url(./images/products/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg)] tablet2:bg-[url(./images/products/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg)] desktop2:bg-[url(./images/products/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg)] tablet2:w-[60%] tablet2:aspect-[395/368]' />
     </section>
+  )
+}
+
+export function SimilarItems() {
+  return (
+    <section className='mb-[12rem] desktop2:mb-[16rem]'>
+      <h2 className='similar-items__heading text-center text-section-heading uppercase mb-[4rem]'>
+        You may also like
+      </h2>
+      <div className='w-full flex flex-col gap-y-[5.6rem] tablet2:flex-row tablet2:gap-x-[1rem] desktop2:gap-x-[3rem]'>
+        <ProductLinkCard />
+        <ProductLinkCard />
+        <ProductLinkCard />
+      </div>
+    </section>
+  )
+}
+
+export function ProductLinkCard() {
+  return (
+    <div className='w-full'>
+      <div className='w-full flex-grow aspect-[327/120] tablet2:aspect-[223/318] desktop2:aspect-[350/318] bg-cover bg-center bg-no-repeat bg-anti-flash-white bg-[url(./images/shared/mobile/image-xx99-mark-two-headphones.jpg)] tablet2:bg-[url(./images/shared/tablet/image-xx99-mark-two-headphones.jpg)] desktop2:bg-[url(./images/shared/desktop/image-xx99-mark-two-headphones.jpg)] mb-[3.2rem]' />
+      <h3 className='text-reg text-center uppercase mb-[3.2rem]'>
+        XX99 mark ii
+      </h3>
+      <Button
+        variant={1}
+        className='max-w-[16.4rem] mx-auto
+      '
+      >
+        See product
+      </Button>
+    </div>
   )
 }
