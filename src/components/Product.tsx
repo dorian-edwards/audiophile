@@ -1,6 +1,6 @@
-import Text from '../text/Text'
-import Button from '../formElements/Button'
-import { DISPLAY_MODE } from '../../dataTypes'
+import Text from './text/Text'
+import Button from './formElements/Button'
+import { DISPLAY_MODE } from '../config/dataTypes'
 
 export default function Product({
   displayMode,
@@ -39,6 +39,7 @@ export default function Product({
           </Text>
           <Button
             variant={1}
+            className='mx-auto'
             sx={{
               maxWidth: '16rem',
               fontSize: '1.3rem',

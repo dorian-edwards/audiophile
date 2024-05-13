@@ -1,4 +1,4 @@
-import { ProductsProps } from '../dataTypes'
+import { ProductsProps } from '../config/dataTypes'
 import ProductLink from './ProductLink'
 
 export default function Products({ products }: ProductsProps) {

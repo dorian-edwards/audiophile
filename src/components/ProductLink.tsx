@@ -1,4 +1,4 @@
-import { ProductLinkProps } from '../dataTypes'
+import { ProductLinkProps } from '../config/dataTypes'
 import Button from './formElements/Button'
 
 export default function ProductLink({

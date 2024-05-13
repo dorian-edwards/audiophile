@@ -3,7 +3,7 @@ import Text from './text/Text'
 import Earbuds from '../images/shared/mobile/image-category-thumbnail-earbuds.png'
 import Speaker from '../images/shared/mobile/image-category-thumbnail-speakers.png'
 import Headphones from '../images/shared/mobile/image-category-thumbnail-headphones.png'
-import { CATEGORY } from '../dataTypes'
+import { CATEGORY } from '../config/dataTypes'
 
 export default function CategoryCard({ type }: { type: CATEGORY }) {
   const { title, img, imgAlt } = categoryData[type]

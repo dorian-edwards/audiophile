@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { DISPLAY_MODE } from '../dataTypes'
+import { DISPLAY_MODE } from '../config/dataTypes'
 
 export default function useScreenMonitor() {
   const [display, setDisplay] = useState<DISPLAY_MODE>(

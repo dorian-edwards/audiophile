@@ -3,7 +3,7 @@ import About from '../About'
 import Categories from '../Categories'
 import ProductHighlights from '../ProductHighlights'
 
-import Product from '../header/Product'
+import Product from '../Product'
 
 export default function HomePage() {
   let mode = useScreenMonitor()

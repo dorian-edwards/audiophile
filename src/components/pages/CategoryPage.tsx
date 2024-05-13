@@ -1,6 +1,6 @@
 import CategoryHeader from '../CategoryHeader'
 import Products from '../Products'
-import { CategoryPageProps } from '../../dataTypes'
+import { CategoryPageProps } from '../../config/dataTypes'
 import ProductLayout from '../layouts/ProductLayout'
 
 export default function CategoryPage({
