@@ -7,6 +7,7 @@
 - [Day 3: Home Page Banner](#day-3-home-page-banner)
 - [Day 4: Product Category Card](#day-4-product-category-card)
 - [Day 5: Page Previews](#day-5-page-previews)
+- [Day 6: Product Pages](#day-6-product-pages)
 
 ### Day 1: Form Elements and Theme
 
@@ -555,3 +556,87 @@ export default function HomePage() {
 And here's how it turned out.
 
 ![Partial homepage of Frontend Mentor audiophile project](./images/homepage-incomplete.png)
+
+### Day 6: Product Pages
+
+#### Change of plans: Scratching the Text Component
+
+The longer I work on the project the more I find little changes or new stylings in the typography. Moreover, the semantics don't always match up. The design systems lists the typography with headers (h1 - h6) but when these stylings are used, their semantic meaning isn't appropriate. For instance the typography for a heading on a desktop screen will be h1, which is great. But that same heading, on a smaller screen will be an h2 🤨. This in addition to the subtle changes not covered by the design system led me to add an additional sx (styling) component to my Text component which sort of works but is just, in my opinion, a tad inelegant.
+
+Instead I decided to use Tailwind's theme customization to add custom fonts. This allows me to specify font size, line height, and font weight. And is far less convoluted than an entire component relying on objects, additional props and so on and so fort. I can use a className `text-2xl` and get three base attributes then sprinkle a color or background on top easily with another line or two. Morever, this gives me more flexibility when choosing tags. I no longer have to sacrifice semantics for styling.
+
+```js
+// tailwindconfig.js
+
+fontSize: {
+      '2xl': [
+        '5.6rem',
+        {
+          lineHeight: '5.8rem',
+          letterSpacing: '0.2rem',
+          fontWeight: '700',
+        },
+      ],
+      xl: [
+        '4rem',
+        {
+          lineHeight: '4.4rem',
+          letterSpacing: '0.15rem',
+          fontWeight: '700',
+        },
+      ],
+      lg: [
+        '3.2rem',
+        {
+          lineHeight: '3.6rem',
+          letterSpacing: '0.115rem',
+          fontWeight: '700',
+        },
+      ],
+      // ...
+}
+```
+
+#### Images 😕
+
+For the product page images, I follwed the same pattern with the product previews and made the image the background of a div element. For the 'similar items' components this allowed me to blend the image along with the light gray background color. In addition, I just found this to be simpler given the need to changes images based on screen size and how React handles image imports.
+
+The shape of the image also sometimes changes so using a div with a background image allowed me to adjust the aspect ratio easily.
+
+```tsx
+export default function ProductImage() {
+  return (
+    <div
+      className={`product-image__img-wrapper
+     w-full bg-cover bg-center bg-no-repeat
+     shrink-0 mb-[3.2rem]
+     bg-[url(./images/products/product-xx99-mark-two-headphones/mobile/image-product.jpg)]
+     tablet2:bg-[url(./images/products/product-xx99-mark-two-headphones/tablet/image-product.jpg)]
+     desktop2:bg-[url(./images/products/product-xx99-mark-two-headphones/desktop/image-product.jpg)]
+     tablet2:pb-0
+     tablet2:mb-0
+     tablet2:max-w-[28rem]
+     desktop2:max-w-[54rem]
+     aspect-square
+     tablet2:aspect-[281/480]
+     desktop2:aspect-[27/28] mx-auto`}
+    />
+  )
+}
+```
+
+<br/>
+
+It's a lot but this demonstrates how each breakpoint results in a new image for the background, and a new aspect ratio for the container. On mobile and desktop screens the primary product image is practically a square, on tablets, however, it has the aspect ratio of a portrait.
+
+<br/>
+
+![Headphone images on mobile, tablet, and desktop screen](./images/chrome-capture-2024-5-13.gif)
+
+<br/>
+
+Ultimately this page is fairly straight foward. The trickiest part is the responsive styling for the images and aspect ratio but Tailwind makes this a breeze. But now that the styling is done I have to make it all reusable by creating the props each component will need. At [this](https://github.com/dorian-edwards/audiophile/tree/417f6ac3ad7b3e597b76d96bb3f2bb4188fd0bf2/src) point all the info is hardcoded. I'm currently building an object to hold all of the app's data
+
+<br/>
+
+![](./images/product-desktop.png)
