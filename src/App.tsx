@@ -7,7 +7,7 @@ function App() {
   return (
     // <Canvas lightMode={true}>
     <BaseLayout>
-      <ProductPage />
+      <HomePage />
     </BaseLayout>
     // </Canvas>
   )

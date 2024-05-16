@@ -1,15 +1,12 @@
-import useScreenMonitor from '../../hooks/useScreenMonitor'
 import About from '../About'
 import Categories from '../Categories'
+import HeadlineBanner from '../HeadlineBanner'
 import ProductHighlights from '../ProductHighlights'
 
-import Product from '../Product'
-
 export default function HomePage() {
-  let mode = useScreenMonitor()
   return (
     <>
-      <Product displayMode={mode} />
+      <HeadlineBanner />
       <div className='container flex flex-col gap-y-[2.4rem]'>
         <Categories />
         <ProductHighlights />

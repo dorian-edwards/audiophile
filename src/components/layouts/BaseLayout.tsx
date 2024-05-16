@@ -6,7 +6,7 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
-      <main className='container'>{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   )
