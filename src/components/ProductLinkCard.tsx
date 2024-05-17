@@ -1,4 +1,4 @@
-import Button from './components/formElements/Button'
+import Button from './formElements/Button'
 
 export default function ProductLinkCard() {
   return (

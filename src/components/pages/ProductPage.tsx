@@ -1,9 +1,9 @@
-import ImageCollage from '../../ImageCollage'
-import ProductDetails from '../../ProductDetails'
-import ProductFeatures from '../../ProductFeatures'
-import ProductImage from '../../ProductImage'
-import ProductInventory from '../../ProductInventory'
-import SimilarItems from '../../SimilarItems'
+import ImageCollage from '../ImageCollage'
+import ProductDetails from '../ProductDetails'
+import ProductFeatures from '../ProductFeatures'
+import ProductImage from '../ProductImage'
+import ProductInventory from '../ProductInventory'
+import SimilarItems from '../SimilarItems'
 import ProductLayout from '../layouts/ProductLayout'
 
 export default function ProductPage() {

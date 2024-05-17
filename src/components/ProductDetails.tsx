@@ -1,5 +1,5 @@
-import Button from './components/formElements/Button'
-import Counter from './components/formElements/Counter'
+import Button from './formElements/Button'
+import Counter from './formElements/Counter'
 
 export default function ProductDetails() {
   return (
