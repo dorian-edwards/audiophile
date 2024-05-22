@@ -9,7 +9,7 @@ import ProductLayout from '../layouts/ProductLayout'
 export default function ProductPage() {
   return (
     <ProductLayout>
-      <div className='pt-[10rem]'>
+      <section className='product container pt-[10rem]'>
         <div className='tablet2:flex gap-x-[7rem] tablet2:mb-[12rem] tablet2:h-[48rem] desktop2:h-[56rem] desktop2:mb-[16rem]'>
           <ProductImage />
           <ProductDetails />
@@ -20,7 +20,7 @@ export default function ProductPage() {
         </div>
         <ImageCollage />
         <SimilarItems />
-      </div>
+      </section>
     </ProductLayout>
   )
 }

@@ -5,9 +5,9 @@ export default function Products({ products }: ProductsProps) {
   return (
     <div className='container'>
       <ul>
-        {products.map((productDetails, i) => (
+        {products.map((product, i) => (
           <li key={i}>
-            <ProductLink productDetails={productDetails} index={i} />
+            <ProductLink product={product} index={i} />
           </li>
         ))}
       </ul>

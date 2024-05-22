@@ -21,12 +21,7 @@ export type PagePreviewStyles = {
 }
 
 export interface ProductLinkProps {
-  productDetails: {
-    model: string
-    category: string
-    img: string
-    description: string
-  }
+  product: Product
   index: number
 }
 
@@ -38,7 +33,7 @@ export interface ProductDetails {
 }
 
 export interface ProductsProps {
-  products: ProductDetails[]
+  products: Product[]
 }
 
 export interface CategoryPageProps {
@@ -46,4 +41,25 @@ export interface CategoryPageProps {
     title: string
     products: ProductDetails[]
   }
+}
+
+export interface Product {
+  model: string
+  productType: string
+  category: string
+  new: boolean
+  primaryImage: string
+  cardImage: string
+  description: string
+  price: string
+  features: string
+  inventory: { quantity: number; name: string }[]
+  collageImg1: string
+  collageImg2: string
+  collageImg3: string
+  relatedProducts: string[]
+}
+
+export interface ProductData {
+  [key: string]: Product
 }
