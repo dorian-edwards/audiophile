@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Cart from '../../icons/Cart'
 import Hamburger from '../../icons/Hamburger'
 import Logo from '../../icons/Logo'
@@ -8,7 +9,9 @@ export default function Header() {
       <div className='container py-[3.2rem]'>
         <div className='mobile-nav flex justify-between tablet2:hidden'>
           <Hamburger />
-          <Logo />
+          <Link to='/'>
+            <Logo />
+          </Link>
           <Cart />
         </div>
         <div className='desktop-tablet-nav hidden tablet2:flex justify-between'>
@@ -16,29 +19,23 @@ export default function Header() {
             <div className='burger-wrapper desktop2:hidden'>
               <Hamburger />
             </div>
-            <Logo />
+            <Link to='/'>
+              <Logo />
+            </Link>
           </div>
           <nav className='hidden desktop2:block'>
             <ul className='flex gap-[3.4rem]'>
               <li>
-                <a href='./'>
-                  <p>Home</p>
-                </a>
+                <Link to='/'>Home</Link>
               </li>
               <li>
-                <a href='./'>
-                  <p>Headphones</p>
-                </a>
+                <Link to='/categories/headphones'>Headphones</Link>
               </li>
               <li>
-                <a href='./'>
-                  <p>Speakers</p>
-                </a>
+                <Link to='/categories/speakers'>Speakers</Link>
               </li>
               <li>
-                <a href='./'>
-                  <p>Earbuds</p>
-                </a>
+                <Link to='/categories/earbuds'>Earbuds</Link>
               </li>
             </ul>
           </nav>

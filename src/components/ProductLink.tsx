@@ -8,7 +8,7 @@ export default function ProductLink({
   return (
     <div className='product-link mb-[12rem] min-[1110px]:flex min-[1110px]:mb-[16rem]'>
       <div
-        className={`product-link__img min-[1110px]:w-[54rem] min-[1110px]:mb-0 min-[1110px]:h-[56rem] bg-cover bg-center bg-no-repeat ${primaryImage} h-[352px] mb-[3.2rem] tablet:mb-[5.2rem] shrink-0 ${
+        className={`product-link__img min-[1110px]:w-[54rem] min-[1110px]:mb-0 min-[1110px]:h-[56rem] bg-anti-flash-white bg-[size:35.5rem] bg-center tablet2:bg-[center_bottom_-12rem] desktop2:bg-center bg-no-repeat ${primaryImage} h-[352px] mb-[3.2rem] tablet:mb-[5.2rem] shrink-0 ${
           index % 2 !== 0 ? 'min-[1110px]:order-1' : ''
         }`}
       />

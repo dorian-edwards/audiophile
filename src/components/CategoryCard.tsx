@@ -4,9 +4,10 @@ import Earbuds from '../images/shared/mobile/image-category-thumbnail-earbuds.pn
 import Speaker from '../images/shared/mobile/image-category-thumbnail-speakers.png'
 import Headphones from '../images/shared/mobile/image-category-thumbnail-headphones.png'
 import { CATEGORY } from '../config/dataTypes'
+import { Link } from 'react-router-dom'
 
 export default function CategoryCard({ type }: { type: CATEGORY }) {
-  const { title, img, imgAlt } = categoryData[type]
+  const { title, img, imgAlt, link } = categoryData[type]
   return (
     <div
       id={`category-card-${title}`}
@@ -27,28 +28,38 @@ export default function CategoryCard({ type }: { type: CATEGORY }) {
         >
           {title}
         </Text>
-        <Button variant={3}>Shop</Button>
+        <Link to={link}>
+          <Button variant={3}>Shop</Button>
+        </Link>
       </div>
     </div>
   )
 }
 
 export const categoryData: {
-  [key in CATEGORY]: { title: string; img: string; imgAlt: string }
+  [key in CATEGORY]: {
+    title: string
+    img: string
+    imgAlt: string
+    link: string
+  }
 } = {
   [CATEGORY.HEADPHONES]: {
     title: 'headphones',
     img: Headphones,
     imgAlt: 'Audiophile headphones',
+    link: '/categories/headphones',
   },
   [CATEGORY.SPEAKERS]: {
     title: 'speakers',
     img: Speaker,
     imgAlt: 'Audiophile speaker',
+    link: '/categories/speakers',
   },
   [CATEGORY.EARBUDS]: {
     title: 'earbuds',
     img: Earbuds,
     imgAlt: 'Audiophile earbbuds',
+    link: '/categories/earbuds',
   },
 }
