@@ -42,7 +42,7 @@ export default function Header() {
           <Cart />
         </div>
       </div>
-      <div className='container header-border h-[0.1rem] bg-border-gray max-[480px]:w-[100%]' />
+      <div className='container header-bottom-border h-[0.1rem] bg-border-gray max-[480px]:w-[100%]' />
     </header>
   )
 }

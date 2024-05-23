@@ -8,6 +8,7 @@
 - [Day 4: Product Category Card](#day-4-product-category-card)
 - [Day 5: Page Previews](#day-5-page-previews)
 - [Day 6: Product Pages](#day-6-product-pages)
+- [Day 7: Header Refactor](#day-7-header-refactor)
 
 ### Day 1: Form Elements and Theme
 
@@ -640,3 +641,72 @@ Ultimately this page is fairly straight foward. The trickiest part is the respon
 <br/>
 
 ![](./images/product-desktop.png)
+
+### Day 7: Header Refactor
+
+[Originally](https://github.com/dorian-edwards/audiophile/tree/b3c4128fc30c7ec2804846e7d6368bdfb13d6a6e/src/components/header) I created three separate components for the header and used a screenMonitor hook to switch header components based on screen size. I think I may have done this because I perceived it to be easier at the time. After enough tinkering elswhere in my app with responsive elements, I realized I could accomplish this all in one header component and just use Tailwind's responsive utility classes to accomplish the same thing but in a much simpler way.
+
+```tsx
+import { Link } from 'react-router-dom'
+import Cart from '../../icons/Cart'
+import Hamburger from '../../icons/Hamburger'
+import Logo from '../../icons/Logo'
+
+export default function Header() {
+  return (
+    <header className='bg-black text-white'>
+      <div className='container py-[3.2rem]'>
+        <div className='mobile-nav flex justify-between tablet2:hidden'>
+          {' '}
+          {/* here */}
+          <Hamburger />
+          <Link to='/'>
+            <Logo />
+          </Link>
+          <Cart />
+        </div>
+        <div className='desktop-tablet-nav hidden tablet2:flex justify-between'>
+          {' '}
+          {/* here */}
+          <div className='tablet-logo-burger-wrapper flex gap-x-[4.3rem] items-center'>
+            <div className='burger-wrapper desktop2:hidden'>
+              {' '}
+              {/* here */}
+              <Hamburger />
+            </div>
+            <Link to='/'>
+              <Logo />
+            </Link>
+          </div>
+          <nav className='hidden desktop2:block'>
+            {' '}
+            {/* here */}
+            <ul className='flex gap-[3.4rem]'>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/categories/headphones'>Headphones</Link>
+              </li>
+              <li>
+                <Link to='/categories/speakers'>Speakers</Link>
+              </li>
+              <li>
+                <Link to='/categories/earbuds'>Earbuds</Link>
+              </li>
+            </ul>
+          </nav>
+          <Cart />
+        </div>
+      </div>
+      <div className='container header-bottom-border h-[0.1rem] bg-border-gray max-[480px]:w-[100%]' />
+    </header>
+  )
+}
+```
+
+> Points of interests show where a little manipulation of the element's display property goes a long way!
+
+ <br/>
+
+It was simpler to just put the same elements of what were previously separate components into one larger component and use Tailwind responsive utility classes to display or hide them based on size. I think when I originally considered this, I imagined it would be a messy, convoluted nightmare. Turns out, it wasn't. Also of note, at this point I've also started building routes, but more on that later.
