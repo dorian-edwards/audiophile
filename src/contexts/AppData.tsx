@@ -6,7 +6,7 @@ const data: ProductData = {
     model: 'xx99 mark ii',
     productType: 'headphones',
     category: 'headphones',
-    new: true,
+    newProduct: true,
     primaryImage:
       'bg-[url(./images/products/product-xx99-mark-two-headphones/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-xx99-mark-two-headphones/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-xx99-mark-two-headphones/desktop/image-product.jpg)]',
     cardImage:
@@ -50,7 +50,7 @@ const data: ProductData = {
     model: 'xx99 mark i',
     productType: 'headphones',
     category: 'headphones',
-    new: false,
+    newProduct: false,
     primaryImage:
       'bg-[url(./images/products/product-xx99-mark-one-headphones/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-xx99-mark-one-headphones/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-xx99-mark-one-headphones/desktop/image-product.jpg)]',
     cardImage:
@@ -90,7 +90,7 @@ const data: ProductData = {
     model: 'xx59',
     productType: 'headphones',
     category: 'headphones',
-    new: false,
+    newProduct: false,
     primaryImage:
       'bg-[url(./images/products/product-xx59-headphones/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-xx59-headphones/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-xx59-headphones/desktop/image-product.jpg)]',
     cardImage:
@@ -130,7 +130,7 @@ const data: ProductData = {
     model: 'zx9',
     productType: 'speaker',
     category: 'speakers',
-    new: true,
+    newProduct: true,
     primaryImage:
       'bg-[url(./images/products/product-zx9-speaker/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-zx9-speaker/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-zx9-speaker/desktop/image-product.jpg)]',
     cardImage:
@@ -174,7 +174,7 @@ const data: ProductData = {
     model: 'zx7',
     productType: 'speaker',
     category: 'speakers',
-    new: false,
+    newProduct: false,
     primaryImage:
       'bg-[url(./images/products/product-zx7-speaker/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-zx7-speaker/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-zx7-speaker/desktop/image-product.jpg)]',
     cardImage:
@@ -218,7 +218,7 @@ const data: ProductData = {
     model: 'yx1 wireless',
     productType: 'earbuds',
     category: 'earbuds',
-    new: true,
+    newProduct: true,
     primaryImage:
       'bg-[url(./images/products/product-zx7-speaker/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-zx7-speaker/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-zx7-speaker/desktop/image-product.jpg)]',
     cardImage: '',

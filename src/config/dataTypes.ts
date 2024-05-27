@@ -47,7 +47,7 @@ export interface Product {
   model: string
   productType: string
   category: string
-  new: boolean
+  newProduct: boolean
   primaryImage: string
   cardImage: string
   description: string
@@ -62,4 +62,12 @@ export interface Product {
 
 export interface ProductData {
   [key: string]: Product
+}
+
+export interface ProductDetailProps {
+  model: string
+  productType: string
+  newProduct: boolean
+  description: string
+  price: string
 }
