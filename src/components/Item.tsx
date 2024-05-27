@@ -1,10 +1,16 @@
-export default function Item() {
+export default function Item({
+  quantity,
+  name,
+}: {
+  quantity: number
+  name: string
+}) {
   return (
     <div className='item-inventory flex'>
-      <p className='quantity w-[10%] text-body text-caramel font-bold'>1x</p>
-      <p className='item w-[90%] text-body text-med-gray capitalize'>
-        headphone unit
-      </p>
+      <small className='quantity w-[10%] text-body text-caramel font-bold'>
+        {quantity}x
+      </small>
+      <p className='item w-[90%] text-body text-med-gray capitalize'>{name}</p>
     </div>
   )
 }

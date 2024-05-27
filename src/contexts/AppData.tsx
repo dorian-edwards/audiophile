@@ -220,7 +220,7 @@ const data: ProductData = {
     category: 'earbuds',
     newProduct: true,
     primaryImage:
-      'bg-[url(./images/products/product-zx7-speaker/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-zx7-speaker/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-zx7-speaker/desktop/image-product.jpg)]',
+      'bg-[url(./images/products/product-yx1-earbuds/mobile/image-product.jpg)] tablet2:bg-[url(./images/products/product-yx1-earbuds/tablet/image-product.jpg)] desktop2:bg-[url(./images/products/product-yx1-earbuds/desktop/image-product.jpg)]',
     cardImage: '',
     description:
       'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.',

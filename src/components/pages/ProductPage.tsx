@@ -30,10 +30,16 @@ export default function ProductPage() {
           />
         </div>
         <div className='desktop2:flex gap-x-[12.5rem] desktop2:mb-[7.2rem]'>
-          <ProductFeatures />
-          <ProductInventory />
+          <ProductFeatures features={productObj.features} />
+          <ProductInventory inventory={productObj.inventory} />
         </div>
-        <ImageCollage />
+        <ImageCollage
+          images={[
+            productObj.collageImg1,
+            productObj.collageImg2,
+            productObj.collageImg3,
+          ]}
+        />
         <SimilarItems />
       </section>
     </ProductLayout>
