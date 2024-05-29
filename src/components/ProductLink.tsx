@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom'
 import { ProductLinkProps } from '../config/dataTypes'
 import Button from './formElements/Button'
 
 export default function ProductLink({
-  product: { model, category, primaryImage, description },
+  product: { model, category, primaryImage, description, link },
   index,
 }: ProductLinkProps) {
   return (
@@ -33,12 +34,14 @@ export default function ProductLink({
           <p className='text-body text-center min-[1110px]:text-left  text-med-gray mb-[2.4rem] max-w-[57.2rem] mx-auto'>
             {description}
           </p>
-          <Button
-            variant={1}
-            className='!max-w-[16.4rem] mx-auto min-[1110px]:mx-0 hover:bg-atomic-tangerine'
-          >
-            See Product
-          </Button>
+          <Link to={`/products/${link}`}>
+            <Button
+              variant={1}
+              className='!max-w-[16.4rem] mx-auto min-[1110px]:mx-0 hover:bg-atomic-tangerine'
+            >
+              See Product
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

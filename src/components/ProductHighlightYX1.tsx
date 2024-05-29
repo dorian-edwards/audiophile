@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from './formElements/Button'
 import Text from './text/Text'
 
@@ -17,16 +18,18 @@ export default function PagePreviewYX1() {
           >
             YX1 earbuds
           </Text>
-          <Button
-            variant={2}
-            sx={{
-              maxWidth: '16.5rem',
-              backgroundColor: 'transparent',
-              fontSize: '1.2rem',
-            }}
-          >
-            see product
-          </Button>
+          <Link to='/products/yx1'>
+            <Button
+              variant={2}
+              sx={{
+                maxWidth: '16.5rem',
+                backgroundColor: 'transparent',
+                fontSize: '1.2rem',
+              }}
+            >
+              see product
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

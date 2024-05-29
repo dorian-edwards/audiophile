@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from './formElements/Button'
 import Text from './text/Text'
 
@@ -11,12 +12,14 @@ export default function PagePreviewZX7() {
         >
           ZX7 Speaker
         </Text>
-        <Button
-          variant={2}
-          sx={{ maxWidth: '18rem', backgroundColor: 'transparent' }}
-        >
-          See product
-        </Button>
+        <Link to='/products/zx7'>
+          <Button
+            variant={2}
+            sx={{ maxWidth: '18rem', backgroundColor: 'transparent' }}
+          >
+            See product
+          </Button>
+        </Link>
       </div>
     </div>
   )

@@ -15,12 +15,12 @@ export function ScrollToTop() {
 function App() {
   return (
     // <Canvas lightMode={true}>
-    <>
+    <div className='flex flex-col h-[100vh]'>
       <ScrollToTop />
       <BaseLayout>
         <Outlet />
       </BaseLayout>
-    </>
+    </div>
     // </Canvas>
   )
 }

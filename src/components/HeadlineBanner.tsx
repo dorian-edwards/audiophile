@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from './formElements/Button'
 
 export default function HeadlineBanner() {
@@ -16,9 +17,11 @@ export default function HeadlineBanner() {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Button variant={1} className='max-w-[16.4rem] mx-auto desktop2:ml-0'>
-          See Product
-        </Button>
+        <Link to='/products/xx992'>
+          <Button variant={1} className='max-w-[16.4rem] mx-auto desktop2:ml-0'>
+            See Product
+          </Button>
+        </Link>
       </div>
     </section>
   )

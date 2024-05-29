@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from './formElements/Button'
 import Text from './text/Text'
 
@@ -44,19 +45,21 @@ export default function PagePreviewZX9() {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </Text>
-        <Button
-          variant={2}
-          className='min-[1110px]:!mx-0 min-[1110px]:!mr-auto'
-          sx={{
-            backgroundColor: '#000',
-            color: '#FFF',
-            display: 'block',
-            margin: '0 auto',
-            maxWidth: '18rem',
-          }}
-        >
-          see product
-        </Button>
+        <Link to='/products/zx9'>
+          <Button
+            variant={2}
+            className='min-[1110px]:!mx-0 min-[1110px]:!mr-auto'
+            sx={{
+              backgroundColor: '#000',
+              color: '#FFF',
+              display: 'block',
+              margin: '0 auto',
+              maxWidth: '18rem',
+            }}
+          >
+            see product
+          </Button>
+        </Link>
       </div>
     </div>
   )

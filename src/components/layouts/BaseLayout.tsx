@@ -6,7 +6,7 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className='flex-grow'>{children}</main>
       <Footer />
     </>
   )

@@ -47,6 +47,7 @@ export interface Product {
   model: string
   productType: string
   category: string
+  link: string
   newProduct: boolean
   primaryImage: string
   cardImage: string
