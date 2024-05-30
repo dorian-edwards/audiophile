@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d309def1.css",
-    "main.js": "/static/js/main.49c97f0b.js",
+    "main.js": "/static/js/main.275d5549.js",
     "static/media/image-speaker-zx9.png": "/static/media/image-speaker-zx9.97769f2fb291eaed1868.png",
     "static/media/image-best-gear.jpg": "/static/media/image-best-gear.4d4a28e9e7c9ab158dd8.jpg",
     "static/media/image-header.jpg": "/static/media/image-header.d200a3583e72c7981f46.jpg",
@@ -19,10 +19,10 @@
     "index.html": "/index.html",
     "static/media/pattern-circles.svg": "/static/media/pattern-circles.e7c4685ab02e7ab920b8.svg",
     "main.d309def1.css.map": "/static/css/main.d309def1.css.map",
-    "main.49c97f0b.js.map": "/static/js/main.49c97f0b.js.map"
+    "main.275d5549.js.map": "/static/js/main.275d5549.js.map"
   },
   "entrypoints": [
     "static/css/main.d309def1.css",
-    "static/js/main.49c97f0b.js"
+    "static/js/main.275d5549.js"
   ]
 }
