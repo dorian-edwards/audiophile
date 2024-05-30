@@ -4,7 +4,7 @@ import './index.css'
 import {
   Route,
   RouterProvider,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
 } from 'react-router-dom'
 import HomePage from './components/pages/Homepage'
@@ -14,11 +14,11 @@ import NotFound from './components/pages/NotFound'
 import ProductDataContext from './contexts/AppData'
 import App from './App'
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <>
       <Route path='/' element={<App />}>
-        <Route path='' element={<HomePage />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='categories/:category' element={<CategoryPage />} />
         <Route path='categories/*' element={<HomePage />} />
         <Route path='products/:product' element={<ProductPage />} />
