@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import FacebookIcon from '../icons/FacebookIcon'
 import InstagramIcon from '../icons/InstagramIcon'
 import Logo from '../icons/Logo'
@@ -13,7 +14,9 @@ export default function Footer() {
         </div>
         <div className='w-full min-[1440px]:flex min-[1440px]:justify-between'>
           <div className='logo-wrapper mb-[4.8rem] flex justify-center min-[768px]:justify-start'>
-            <Logo />
+            <Link to='/'>
+              <Logo />
+            </Link>
           </div>
           <FooterNav />
         </div>
@@ -51,18 +54,18 @@ export function FooterNav() {
   return (
     <nav className='footer-nav mb-[4.8rem]'>
       <ul className='flex flex-col items-center gap-y-[1.6rem] min-[768px]:flex-row gap-x-[3.4rem]'>
-        <li>
+        <Link to='/'>
           <Text type='link'>Home</Text>
-        </li>
-        <li>
+        </Link>
+        <Link to='/categories/headphones'>
           <Text type='link'>Headphones</Text>
-        </li>
-        <li>
+        </Link>
+        <Link to='/categories/speakers'>
           <Text type='link'>Speakers</Text>
-        </li>
-        <li>
+        </Link>
+        <Link to='/categories/earbuds'>
           <Text type='link'>Earbuds</Text>
-        </li>
+        </Link>
       </ul>
     </nav>
   )
