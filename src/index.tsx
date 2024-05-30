@@ -18,7 +18,7 @@ const router = createHashRouter(
   createRoutesFromElements(
     <>
       <Route path='/' element={<App />}>
-        <Route path='/' element={<HomePage />} />
+        <Route path='' element={<HomePage />} />
         <Route path='categories/:category' element={<CategoryPage />} />
         <Route path='categories/*' element={<HomePage />} />
         <Route path='products/:product' element={<ProductPage />} />
